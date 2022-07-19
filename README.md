@@ -18,11 +18,6 @@ npm run dev
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
 
 ### Push to gh-pages Branch & Auto Build on GitHub Pages
 
