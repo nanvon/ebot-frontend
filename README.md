@@ -1,5 +1,9 @@
 # ebot-frontend
 
+## Project preview
+![prewview1](./public/preview1.png)
+![prewview1](./public/preview2.png)
+
 ## Project Setup
 
 ```sh

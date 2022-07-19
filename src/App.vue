@@ -9,19 +9,14 @@ const bot = ref(botData.export_data[5687069307].record_list);
 </script>
 
 <template>
-  <div class="header-info">
-    <div>
-      From {{ dayjs(startTime).format("YYYY年MM月DD日") }} to
-      {{ dayjs(endTime).format("YYYY年MM月DD日") }}
-    </div>
-    <div>Total: {{ total }}</div>
-  </div>
-  <div class="bot-body">
-    <div v-for="item of bot" :key="item.id" class="bot-card">
-      <div v-html="item.text"></div>
-      <div v-html="dayjs(item.created_at).format('YYYY年MM月DD日')"></div>
-    </div>
-  </div>
+  <el-card class="box-card" v-for="item of bot" :key="item.id">
+    <template #header>
+      <div class="card-header">
+        <span>{{ dayjs(item.created_at).format('YYYY年MM月DD日') }}</span>
+      </div>
+    </template>
+    <div v-html="item.text"></div>
+  </el-card>
 </template>
 
 <style lang="scss">
@@ -31,10 +26,8 @@ const bot = ref(botData.export_data[5687069307].record_list);
   padding: 2rem;
   font-weight: normal;
 
-  .bot-body {
-    .bot-card {
-      margin: 10px 0;
-    }
+  .box-card {
+    margin-bottom: 10px;
   }
 }
 </style>
